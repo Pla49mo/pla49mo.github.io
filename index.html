@@ -1,732 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Betsson — Europe's Premier Online Casino & Sports Betting</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet"/>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --orange:#FF6600;--orange2:#CC5200;--orange3:#FF8C42;
-  --gold:#FFB800;--gold2:#E0A200;
-  --bg0:#100d09;--bg1:#171108;--bg2:#1f160a;--card:#1b120a;
-  --border:rgba(255,102,0,.2);--bh:rgba(255,102,0,.5);
-  --grad:linear-gradient(135deg,#FF6600,#CC5200);
-  --grad2:linear-gradient(135deg,#FFB800,#E0A200);
-  --t1:#fff5ee;--t2:#a89078;--t3:#6b4830;
-  --r-sm:8px;--r-md:12px;--r-lg:18px;--r-xl:24px;
-  --sh:0 8px 40px rgba(0,0,0,.6);--glow:0 0 40px rgba(255,102,0,.3);
-}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--bg0);color:var(--t1);overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-button{cursor:pointer;border:none;outline:none;font-family:inherit}
-img{display:block;max-width:100%}
-ul{list-style:none}
-::-webkit-scrollbar{width:5px}
-::-webkit-scrollbar-track{background:var(--bg0)}
-::-webkit-scrollbar-thumb{background:var(--orange);border-radius:99px}
-.container{max-width:1200px;margin:0 auto;padding:0 24px}
-.grad-text{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.gold-text{background:var(--grad2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pla49mo – Free Social Casino Games</title>
+  <meta name="description" content="Play free social casino games with friends. Slots, roulette, blackjack and more – no real money, just fun." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f0b1e;
+      --bg-alt: #161129;
+      --card: #1e1838;
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #f4f2ff;
+      --muted: #a9a3c7;
+      --gold: #ffc94d;
+      --gold-dark: #f59e0b;
+      --purple: #8b5cf6;
+      --pink: #ec4899;
+      --radius: 16px;
+    }
 
-/* NAV */
-.nav{position:sticky;top:0;z-index:900;background:rgba(16,13,9,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1200px;margin:0 auto;padding:0 24px}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.nav-logo-img{height:32px;width:auto;display:block;background:#fff;border-radius:6px;padding:3px 10px}
-.nav-logo-fallback{font-family:'Outfit',sans-serif;font-size:1.6rem;font-weight:700;color:#FF6600;display:none}
-.nav-links{display:flex;align-items:center;gap:4px}
-.nav-link{padding:7px 14px;border-radius:var(--r-sm);font-size:.85rem;font-weight:500;color:var(--t2);transition:all .2s}
-.nav-link:hover{color:var(--t1);background:rgba(255,102,0,.1)}
-.nav-right{display:flex;align-items:center;gap:10px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:10px 22px;border-radius:var(--r-md);font-size:.875rem;font-weight:700;transition:all .2s;cursor:pointer;border:none;font-family:inherit}
-.btn-primary{background:var(--grad);color:#fff;box-shadow:0 0 20px rgba(255,102,0,.4)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 36px rgba(255,102,0,.65)}
-.btn-outline{background:transparent;color:var(--t1);border:2px solid var(--orange)}
-.btn-outline:hover{background:rgba(255,102,0,.12);transform:translateY(-1px)}
-.btn-gold{background:var(--grad2);color:#fff;box-shadow:0 0 20px rgba(255,184,0,.3)}
-.btn-gold:hover{transform:translateY(-2px);box-shadow:0 0 32px rgba(255,184,0,.55)}
-.btn-lg{padding:15px 34px;font-size:1.05rem;border-radius:var(--r-lg)}
-.btn-xl{padding:18px 42px;font-size:1.1rem;border-radius:var(--r-lg)}
-.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
-.nav-hamburger span{width:22px;height:2px;background:var(--t1);border-radius:2px;transition:all .3s}
-.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(16,13,9,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:16px 24px 24px;z-index:899;flex-direction:column;gap:6px}
-.mobile-menu.open{display:flex}
-.mobile-link{padding:11px 14px;border-radius:var(--r-md);font-size:.9rem;font-weight:500;color:var(--t2);transition:all .2s}
-.mobile-link:hover{color:var(--t1);background:rgba(255,102,0,.1)}
-.mobile-btns{display:flex;gap:10px;margin-top:10px;padding-top:14px;border-top:1px solid var(--border)}
-@media(max-width:768px){.nav-links{display:none}.nav-right .btn-outline{display:none}.nav-hamburger{display:flex}}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Poppins", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-/* HERO */
-.hero{padding:80px 0 68px;text-align:center;background:radial-gradient(ellipse 80% 55% at 50% 0%,rgba(255,102,0,.14),transparent 70%)}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,102,0,.12);border:1px solid rgba(255,102,0,.32);border-radius:99px;padding:6px 18px;font-size:.78rem;font-weight:700;color:var(--orange3);letter-spacing:.06em;text-transform:uppercase;margin-bottom:24px}
-.hero-badge::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--orange3);animation:blink 1.2s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.hero h1{font-family:'Outfit',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.15;margin-bottom:20px;max-width:820px;margin-left:auto;margin-right:auto}
-.hero p{font-size:clamp(.9rem,1.8vw,1.1rem);color:var(--t2);max-width:600px;margin:0 auto 36px;line-height:1.75}
-.hero-ctas{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:44px}
-.trust-strip{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
-.trust-item{display:flex;align-items:center;gap:7px;font-size:.75rem;color:var(--t3);font-weight:500}
-.trust-dot{width:26px;height:26px;border-radius:50%;background:rgba(255,102,0,.1);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.8rem}
+    .container { width: min(1140px, 100% - 32px); margin-inline: auto; }
 
-/* BONUS BANNER */
-.bonus-banner{margin:0 0 64px;background:linear-gradient(135deg,#221000,#160900);border:1px solid rgba(255,102,0,.3);border-radius:var(--r-xl);padding:40px 44px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;position:relative;overflow:hidden}
-.bonus-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 80% at 85% 50%,rgba(255,184,0,.08),transparent)}
-.bonus-banner::after{content:'';position:absolute;top:-50px;right:-50px;width:220px;height:220px;background:radial-gradient(circle,rgba(255,102,0,.2),transparent 70%);border-radius:50%;pointer-events:none}
-.bonus-left{flex:1;min-width:220px;position:relative;z-index:1}
-.bonus-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--orange3);margin-bottom:8px}
-.bonus-amount{font-family:'Outfit',sans-serif;font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:800;color:var(--gold);line-height:1.1}
-.bonus-sub-line{color:var(--t2);font-size:.9rem;margin-top:10px;max-width:280px;line-height:1.55}
-.bonus-features{display:flex;gap:14px;flex-wrap:wrap;flex:2;position:relative;z-index:1}
-.bonus-feat{display:flex;align-items:flex-start;gap:11px;background:rgba(0,0,0,.3);border:1px solid rgba(255,102,0,.15);border-radius:var(--r-lg);padding:16px 18px;flex:1;min-width:148px;transition:border-color .2s}
-.bonus-feat:hover{border-color:rgba(255,102,0,.45)}
-.bonus-feat-icon{width:38px;height:38px;border-radius:var(--r-sm);background:rgba(255,102,0,.15);display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0}
-.bonus-feat h4{font-size:.84rem;font-weight:700;margin-bottom:3px}
-.bonus-feat p{font-size:.74rem;color:var(--t2);line-height:1.4}
-@media(max-width:640px){.bonus-banner{padding:26px 20px}.bonus-features{flex-direction:column}}
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 14px 28px; border-radius: 999px; font-weight: 600; font-size: 15px;
+      border: none; cursor: pointer; transition: transform .2s, box-shadow .2s, background .2s;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: #1a1205;
+      box-shadow: 0 8px 24px rgba(245, 158, 11, .35);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(245, 158, 11, .45); }
+    .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+    .btn-ghost:hover { background: rgba(255, 255, 255, .06); }
 
-/* STATS */
-.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:64px}
-@media(max-width:640px){.stats-row{grid-template-columns:repeat(2,1fr)}}
-.stat-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);padding:26px 18px;text-align:center;transition:border-color .2s}
-.stat-card:hover{border-color:var(--orange)}
-.stat-icon{font-size:1.9rem;margin-bottom:10px}
-.stat-value{font-family:'Outfit',sans-serif;font-size:1.5rem;font-weight:700;color:var(--orange);margin-bottom:4px}
-.stat-label{font-size:.78rem;font-weight:600;color:var(--t2);margin-bottom:2px}
-.stat-sub{font-size:.68rem;color:var(--t3)}
+    /* ---------- Header ---------- */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(15, 11, 30, .85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 22px; }
+    .logo-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--purple), var(--pink));
+      display: grid; place-items: center; font-size: 18px;
+    }
+    .logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { color: var(--muted); font-weight: 500; font-size: 15px; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { padding: 10px 22px; }
+    .menu-toggle {
+      display: none; background: none; border: none; color: var(--text);
+      font-size: 26px; cursor: pointer; width: 44px; height: 44px;
+    }
 
-/* SECTION SHARED */
-.section{padding:72px 0}
-.sec-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--orange3);margin-bottom:10px;display:flex;align-items:center;gap:8px}
-.sec-label::before{content:'';width:20px;height:2px;background:var(--grad);border-radius:99px}
-.sec-title{font-family:'Outfit',sans-serif;font-size:clamp(1.5rem,2.5vw,2.2rem);font-weight:700;margin-bottom:14px;line-height:1.2}
-.sec-desc{color:var(--t2);max-width:640px;line-height:1.72;font-size:.93rem}
-.sec-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:36px;gap:16px;flex-wrap:wrap}
-.bg1{background:var(--bg1)}
-.bg2{background:var(--bg2)}
+    /* ---------- Hero ---------- */
+    .hero { position: relative; padding: 90px 0 100px; overflow: hidden; }
+    .hero::before, .hero::after {
+      content: ""; position: absolute; border-radius: 50%; filter: blur(110px); z-index: -1;
+    }
+    .hero::before { width: 420px; height: 420px; background: rgba(139, 92, 246, .35); top: -80px; left: -120px; }
+    .hero::after { width: 380px; height: 380px; background: rgba(236, 72, 153, .25); bottom: -100px; right: -80px; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
+    .badge {
+      display: inline-block; padding: 6px 14px; border-radius: 999px;
+      background: rgba(255, 201, 77, .12); color: var(--gold);
+      font-size: 13px; font-weight: 600; margin-bottom: 20px;
+      border: 1px solid rgba(255, 201, 77, .25);
+    }
+    .hero h1 { font-size: clamp(36px, 5.5vw, 60px); line-height: 1.12; font-weight: 800; margin-bottom: 20px; }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--gold), var(--pink));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero p { color: var(--muted); font-size: 17px; max-width: 520px; margin-bottom: 32px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-stats { display: flex; gap: 36px; margin-top: 44px; flex-wrap: wrap; }
+    .hero-stats strong { display: block; font-size: 26px; font-weight: 700; }
+    .hero-stats small { color: var(--muted); font-size: 13px; }
 
-/* DISCLAIMER */
-.disclaimer{background:rgba(255,184,0,.07);border:1px solid rgba(255,184,0,.24);border-radius:var(--r-md);padding:14px 18px;font-size:.8rem;color:#c9a830;line-height:1.6;margin-bottom:36px;display:flex;gap:10px;align-items:flex-start}
-.disclaimer-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    /* Slot machine visual */
+    .slot {
+      background: linear-gradient(160deg, #2a1f52, #1a1433);
+      border: 1px solid var(--border); border-radius: 28px;
+      padding: 28px; box-shadow: 0 30px 60px rgba(0, 0, 0, .45);
+      max-width: 440px; margin-inline: auto; width: 100%;
+    }
+    .slot-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .slot-title { font-weight: 700; letter-spacing: 2px; font-size: 14px; color: var(--gold); }
+    .coins {
+      background: rgba(0, 0, 0, .3); padding: 6px 14px; border-radius: 999px;
+      font-size: 14px; font-weight: 600;
+    }
+    .reels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 22px; }
+    .reel {
+      aspect-ratio: 1; background: #0f0b1e; border-radius: 16px;
+      display: grid; place-items: center; font-size: clamp(38px, 8vw, 54px);
+      border: 2px solid rgba(255, 201, 77, .2);
+      transition: transform .15s;
+    }
+    .reel.spinning { animation: shake .12s infinite; }
+    @keyframes shake { 50% { transform: translateY(-4px); } }
+    .slot .btn { width: 100%; }
+    .slot-msg { text-align: center; color: var(--muted); font-size: 13px; margin-top: 12px; min-height: 20px; }
 
-/* GAMES */
-.games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px}
-.game-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:all .25s;cursor:pointer}
-.game-card:hover{transform:translateY(-4px);border-color:var(--orange);box-shadow:0 12px 32px rgba(255,102,0,.2)}
-.game-thumb{aspect-ratio:4/3;background:linear-gradient(135deg,var(--bg2),var(--bg1));display:flex;align-items:center;justify-content:center;font-size:2.6rem;position:relative}
-.game-badge{position:absolute;top:8px;left:8px;background:var(--grad);color:#fff;font-size:.63rem;font-weight:700;padding:2px 8px;border-radius:99px;text-transform:uppercase;letter-spacing:.04em}
-.game-badge-gold{background:var(--grad2)}
-.game-info{padding:10px 12px}
-.game-name{font-size:.82rem;font-weight:600;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.game-provider{font-size:.7rem;color:var(--t2)}
+    /* ---------- Sections ---------- */
+    section { padding: 90px 0; }
+    .section-alt { background: var(--bg-alt); }
+    .section-head { text-align: center; max-width: 600px; margin: 0 auto 52px; }
+    .section-head h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin-bottom: 12px; }
+    .section-head p { color: var(--muted); }
 
-/* SPORTS */
-.sports-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(135px,1fr));gap:12px;margin-bottom:32px}
-.sport-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px 14px;text-align:center;cursor:pointer;transition:all .2s}
-.sport-card:hover{transform:translateY(-3px);border-color:var(--orange);box-shadow:0 8px 24px rgba(255,102,0,.15)}
-.sport-icon{font-size:2.2rem;margin-bottom:10px}
-.sport-name{font-size:.82rem;font-weight:600;margin-bottom:3px}
-.sport-markets{font-size:.69rem;color:var(--t2)}
+    /* Games */
+    .games-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+    .game-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden; transition: transform .25s, border-color .25s;
+    }
+    .game-card:hover { transform: translateY(-6px); border-color: rgba(255, 201, 77, .4); }
+    .game-thumb { height: 150px; display: grid; place-items: center; font-size: 60px; }
+    .t1 { background: linear-gradient(135deg, #7c3aed, #db2777); }
+    .t2 { background: linear-gradient(135deg, #059669, #0ea5e9); }
+    .t3 { background: linear-gradient(135deg, #dc2626, #f59e0b); }
+    .t4 { background: linear-gradient(135deg, #2563eb, #7c3aed); }
+    .game-info { padding: 18px; }
+    .game-info h3 { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+    .game-info p { color: var(--muted); font-size: 13px; }
 
-/* LIVE GAMES GRID */
-.live-games-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:14px}
-.live-badge-inline{display:inline-flex;align-items:center;gap:6px;background:rgba(255,50,50,.1);border:1px solid rgba(255,50,50,.3);border-radius:99px;padding:4px 12px;font-size:.7rem;font-weight:700;color:#ff5050;margin-left:12px;letter-spacing:.06em;vertical-align:middle}
-.live-badge-inline::before{content:'';width:6px;height:6px;border-radius:50%;background:#ff5050;animation:blink 1s infinite;flex-shrink:0}
-.live-games-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:28px}
-@media(max-width:900px){.live-games-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.live-games-grid{grid-template-columns:repeat(2,1fr);gap:12px}}
-.live-game-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;cursor:pointer;transition:all .25s}
-.live-game-card:hover{transform:translateY(-4px);border-color:var(--orange);box-shadow:0 12px 32px rgba(255,102,0,.22)}
-.live-game-thumb{aspect-ratio:16/9;overflow:hidden;background:linear-gradient(135deg,var(--bg2),var(--bg1));position:relative}
-.live-game-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
-.live-game-card:hover .live-game-thumb img{transform:scale(1.05)}
-.live-game-thumb-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:2.5rem;background:linear-gradient(135deg,var(--bg2),var(--bg1))}
-.live-game-overlay{position:absolute;top:8px;left:8px;display:flex;align-items:center;gap:5px;background:rgba(255,50,50,.9);border-radius:99px;padding:3px 10px;font-size:.62rem;font-weight:700;color:#fff;letter-spacing:.04em}
-.live-game-overlay::before{content:'';width:5px;height:5px;border-radius:50%;background:#fff;animation:blink 1s infinite}
-.live-game-info{padding:10px 12px}
-.live-game-name{font-size:.85rem;font-weight:700;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.live-game-provider{font-size:.72rem;color:var(--t2)}
-.live-screenshot-wrap{border-radius:var(--r-xl);overflow:hidden;border:1px solid var(--border);margin-bottom:28px}
-.live-screenshot-wrap img{width:100%;height:auto;display:block}
-.live-cta-bar{background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
-.live-cta-bar h4{font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:3px}
-.live-cta-bar p{font-size:.83rem;color:var(--t2)}
+    /* Features */
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .feature {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 30px 26px;
+    }
+    .feature-icon {
+      width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center;
+      font-size: 24px; margin-bottom: 18px; background: rgba(139, 92, 246, .15);
+    }
+    .feature h3 { font-size: 18px; margin-bottom: 8px; font-weight: 600; }
+    .feature p { color: var(--muted); font-size: 14px; }
 
-/* FEATURES */
-.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-@media(max-width:900px){.features-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:580px){.features-grid{grid-template-columns:1fr}}
-.feature-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);padding:28px 24px;transition:all .2s}
-.feature-card:hover{border-color:var(--orange);transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,102,0,.14)}
-.feature-icon{width:48px;height:48px;border-radius:var(--r-md);background:rgba(255,102,0,.12);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:18px}
-.feature-card h3{font-size:.98rem;font-weight:700;margin-bottom:8px}
-.feature-card p{font-size:.82rem;color:var(--t2);line-height:1.65}
+    /* Steps */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; counter-reset: step; }
+    .step { text-align: center; padding: 10px 16px; }
+    .step-num {
+      width: 56px; height: 56px; margin: 0 auto 18px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: #1a1205; font-weight: 800; font-size: 22px; display: grid; place-items: center;
+    }
+    .step h3 { font-size: 18px; margin-bottom: 8px; font-weight: 600; }
+    .step p { color: var(--muted); font-size: 14px; }
 
-/* PROMOTIONS */
-.promo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-@media(max-width:900px){.promo-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:580px){.promo-grid{grid-template-columns:1fr}}
-.promo-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;transition:all .2s;cursor:pointer}
-.promo-card:hover{transform:translateY(-3px);border-color:var(--orange)}
-.promo-thumb{padding:26px;background:linear-gradient(135deg,var(--bg2),var(--bg1));text-align:center;font-size:2.8rem;min-height:100px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border);position:relative}
-.promo-type-tag{position:absolute;top:10px;right:10px;background:var(--grad);color:#fff;font-size:.63rem;font-weight:700;padding:3px 10px;border-radius:99px;text-transform:uppercase}
-.promo-body{padding:18px 20px}
-.promo-title{font-size:.95rem;font-weight:700;margin-bottom:6px}
-.promo-desc{font-size:.78rem;color:var(--t2);line-height:1.55;margin-bottom:14px}
-.promo-amount{font-family:'Outfit',sans-serif;font-size:1.15rem;font-weight:700;color:var(--orange)}
+    /* CTA */
+    .cta-box {
+      text-align: center; padding: 60px 28px; border-radius: 28px;
+      background: linear-gradient(135deg, #6d28d9, #be185d);
+      position: relative; overflow: hidden;
+    }
+    .cta-box h2 { font-size: clamp(26px, 4vw, 40px); font-weight: 800; margin-bottom: 12px; }
+    .cta-box p { color: rgba(255, 255, 255, .85); margin-bottom: 28px; }
 
-/* RESPONSIBLE GAMBLING */
-.resp-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
-@media(max-width:768px){.resp-grid{grid-template-columns:1fr}}
-.resp-list{display:flex;flex-direction:column;gap:11px;margin-top:18px}
-.resp-item{display:flex;align-items:flex-start;gap:10px;font-size:.875rem;color:var(--t2);line-height:1.55}
-.resp-item::before{content:'›';color:var(--orange3);font-size:1.2rem;font-weight:700;flex-shrink:0;margin-top:-1px}
-.resp-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);padding:36px;text-align:center}
-.resp-highlight{background:rgba(255,102,0,.08);border:1px solid rgba(255,102,0,.22);border-radius:var(--r-md);padding:18px 20px;margin-top:18px;font-size:.875rem;color:var(--t1);line-height:1.65;font-weight:500}
-.resp-tools{display:flex;flex-direction:column;gap:10px;text-align:left;margin-top:16px}
-.resp-tool-item{display:flex;align-items:center;gap:12px;padding:11px 14px;background:var(--bg1);border:1px solid var(--border);border-radius:var(--r-md)}
-.resp-tool-item-icon{font-size:1.15rem}
-.resp-tool-item-title{font-size:.84rem;font-weight:600}
-.resp-tool-item-sub{font-size:.73rem;color:var(--t2)}
+    /* Footer */
+    footer { border-top: 1px solid var(--border); padding: 48px 0 32px; }
+    .footer-top { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; list-style: none; }
+    .footer-links a { color: var(--muted); font-size: 14px; }
+    .footer-links a:hover { color: var(--text); }
+    .disclaimer {
+      margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border);
+      color: var(--muted); font-size: 12.5px; text-align: center; line-height: 1.7;
+    }
+    .age { display: inline-block; border: 1px solid var(--muted); border-radius: 6px; padding: 0 6px; margin-right: 6px; font-weight: 600; }
 
-/* CTA */
-.cta-banner{background:linear-gradient(135deg,#221000,#180900);border:1px solid rgba(255,102,0,.3);border-radius:var(--r-xl);padding:56px 48px;text-align:center;position:relative;overflow:hidden}
-.cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(255,102,0,.1),transparent)}
-.cta-banner h2{font-family:'Outfit',sans-serif;font-size:clamp(1.6rem,2.8vw,2.4rem);font-weight:700;margin-bottom:14px;position:relative}
-.cta-banner p{color:var(--t2);font-size:1rem;margin-bottom:32px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.72;position:relative}
-.cta-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;position:relative}
+    /* ---------- Responsive ---------- */
+    @media (max-width: 960px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero p { margin-inline: auto; }
+      .hero-actions, .hero-stats { justify-content: center; }
+      .games-grid { grid-template-columns: repeat(2, 1fr); }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+    }
 
-/* FOOTER */
-.footer{background:var(--bg1);border-top:1px solid var(--border);padding:56px 0 0}
-.footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:48px}
-@media(max-width:768px){.footer-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
-.footer-col h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--orange3);margin-bottom:16px}
-.footer-col a,.footer-col p{display:block;font-size:.82rem;color:var(--t2);margin-bottom:8px;transition:color .2s;line-height:1.5}
-.footer-col a:hover{color:var(--t1)}
-.footer-bottom{border-top:1px solid var(--border);padding:20px 0;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
-.footer-bottom-left{display:flex;align-items:center;gap:14px}
-.footer-brand{font-family:'Outfit',sans-serif;font-size:1.3rem;font-weight:700;color:var(--orange)}
-.footer-copy{font-size:.74rem;color:var(--t3)}
-.footer-socials{display:flex;gap:8px}
-.social-icon{width:34px;height:34px;border-radius:var(--r-sm);background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.9rem;transition:all .2s;cursor:pointer}
-.social-icon:hover{border-color:var(--orange);background:rgba(255,102,0,.14)}
-.gamble-bar{background:#100d09;border-top:1px solid var(--border);padding:14px 24px;text-align:center;font-size:.71rem;color:var(--t3);line-height:1.6}
-</style>
+    @media (max-width: 760px) {
+      .menu-toggle { display: block; }
+      .nav-links {
+        position: absolute; top: 70px; left: 0; right: 0;
+        flex-direction: column; gap: 0; padding: 8px 16px 20px;
+        background: var(--bg); border-bottom: 1px solid var(--border);
+        display: none;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a { display: block; padding: 14px 0; border-bottom: 1px solid var(--border); }
+      .nav-links .nav-cta { margin-top: 14px; width: 100%; border-bottom: none; color: #1a1205; }
+      section { padding: 64px 0; }
+      .hero { padding: 56px 0 70px; }
+      .steps { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 520px) {
+      .games-grid, .features-grid { grid-template-columns: 1fr; }
+      .hero-actions .btn { width: 100%; }
+      .hero-stats { gap: 24px; }
+      .footer-top { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <img src="logo.png" alt="Betsson" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-      <span class="nav-logo-fallback">betsson</span>
-    </a>
-    <div class="nav-links">
-      <a href="#casino" class="nav-link">Casino</a>
-      <a href="#sports" class="nav-link">Sports</a>
-      <a href="#live" class="nav-link">Live Casino</a>
-      <a href="#promotions" class="nav-link">Promotions</a>
-      <a href="how-it-works.html" class="nav-link">How It Works</a>
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo"><div class="logo-icon">🎰</div>pla<span>49</span>mo</a>
+      <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#games">Games</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How it Works</a></li>
+        <li><a href="#play" class="btn btn-primary nav-cta">Play Free</a></li>
+      </ul>
     </div>
-    <div class="nav-right">
-      <button class="btn btn-outline">Log In</button>
-      <button class="btn btn-primary">Join Now</button>
-      <div class="nav-hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#casino" class="mobile-link">Casino</a>
-    <a href="#sports" class="mobile-link">Sports</a>
-    <a href="#live" class="mobile-link">Live Casino</a>
-    <a href="#promotions" class="mobile-link">Promotions</a>
-    <a href="how-it-works.html" class="mobile-link">How It Works</a>
-    <div class="mobile-btns">
-      <button class="btn btn-outline" style="flex:1;font-size:.85rem">Log In</button>
-      <button class="btn btn-primary" style="flex:1;font-size:.85rem">Join Now</button>
-    </div>
-  </div>
-</nav>
+  </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-badge">🏆 Europe's #1 Online Gaming Platform</div>
-    <h1>
-      <span class="grad-text">Premium Casino</span> &amp; Sports Betting<br/>
-      Since 1963
-    </h1>
-    <p>Join over 10 million players across Europe and beyond. Thousands of casino games, live sports, and exclusive bonuses — all on a fully licensed, secure platform.</p>
-    <div class="hero-ctas">
-      <button class="btn btn-primary btn-xl">🎰 Claim Welcome Bonus</button>
-      <button class="btn btn-outline btn-lg">Explore Games →</button>
-    </div>
-    <div class="trust-strip">
-      <div class="trust-item"><div class="trust-dot">🔒</div>256-bit SSL</div>
-      <div class="trust-item"><div class="trust-dot">🏛️</div>MGA Licensed</div>
-      <div class="trust-item"><div class="trust-dot">⚡</div>Fast Payouts</div>
-      <div class="trust-item"><div class="trust-dot">🎯</div>Fair Play Certified</div>
-      <div class="trust-item"><div class="trust-dot">💬</div>24/7 Support</div>
-    </div>
-  </div>
-</section>
-
-<!-- BONUS BANNER -->
-<div class="container">
-  <div class="bonus-banner">
-    <div class="bonus-left">
-      <div class="bonus-label">Welcome Package</div>
-      <div class="bonus-amount">€1,000</div>
-      <div style="font-family:'Outfit',sans-serif;font-size:1.2rem;font-weight:700;color:var(--t2);margin-top:4px">+ 200 Free Spins</div>
-      <div class="bonus-sub-line">Across your first 4 deposits. Min deposit €20. T&amp;Cs apply. 18+ only.</div>
-      <button class="btn btn-gold" style="margin-top:20px">Claim Bonus →</button>
-    </div>
-    <div class="bonus-features">
-      <div class="bonus-feat">
-        <div class="bonus-feat-icon">🎁</div>
-        <div><h4>1st Deposit</h4><p>100% up to €200 + 50 Free Spins</p></div>
-      </div>
-      <div class="bonus-feat">
-        <div class="bonus-feat-icon">🎰</div>
-        <div><h4>2nd Deposit</h4><p>50% up to €300 + 50 Free Spins</p></div>
-      </div>
-      <div class="bonus-feat">
-        <div class="bonus-feat-icon">⚽</div>
-        <div><h4>Sports Bonus</h4><p>€25 free bet on first sports wager</p></div>
-      </div>
-      <div class="bonus-feat">
-        <div class="bonus-feat-icon">🃏</div>
-        <div><h4>Live Casino</h4><p>€100 cashback on first Live session</p></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- STATS -->
-<div class="container">
-  <div class="stats-row">
-    <div class="stat-card">
-      <div class="stat-icon">👥</div>
-      <div class="stat-value">10M+</div>
-      <div class="stat-label">Active Players</div>
-      <div class="stat-sub">Global community</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-icon">🎮</div>
-      <div class="stat-value">4,000+</div>
-      <div class="stat-label">Casino Games</div>
-      <div class="stat-sub">Slots, tables & live</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-icon">⚽</div>
-      <div class="stat-value">35+</div>
-      <div class="stat-label">Sports Markets</div>
-      <div class="stat-sub">Pre-match & in-play</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-icon">🏆</div>
-      <div class="stat-value">60+</div>
-      <div class="stat-label">Years in Business</div>
-      <div class="stat-sub">Est. 1963</div>
-    </div>
-  </div>
-</div>
-
-<!-- CASINO SECTION -->
-<section class="section bg1" id="casino">
-  <div class="container">
-    <div class="disclaimer">
-      <div class="disclaimer-icon">⚠️</div>
-      <div><strong>Affiliate Disclosure:</strong> This site is an independent affiliate and does not provide gambling services directly. We may earn a commission on sign-ups via our links. Gambling involves financial risk — play responsibly. 18+ only. <a href="affiliate-disclosure.html" style="color:var(--gold);text-decoration:underline">Full Disclosure</a></div>
-    </div>
-    <div class="sec-header">
-      <div>
-        <div class="sec-label">Casino</div>
-        <div class="sec-title">Featured <span class="grad-text">Casino Games</span></div>
-        <div class="sec-desc">Explore thousands of slots, jackpots, and table games from premium providers including NetEnt, Evolution Gaming, and Pragmatic Play.</div>
-      </div>
-      <button class="btn btn-outline">View All →</button>
-    </div>
-    <div class="games-grid">
-      <div class="game-card">
-        <div class="game-thumb"><span class="game-badge">HOT</span>🎰</div>
-        <div class="game-info"><div class="game-name">Starburst XXXtreme</div><div class="game-provider">NetEnt</div></div>
-      </div>
-      <div class="game-card">
-        <div class="game-thumb"><span class="game-badge game-badge-gold">JACKPOT</span>💎</div>
-        <div class="game-info"><div class="game-name">Mega Fortune</div><div class="game-provider">NetEnt</div></div>
-      </div>
-      <div class="game-card">
-        <div class="game-thumb"><span class="game-badge">NEW</span>🍒</div>
-        <div class="game-info"><div class="game-name">Gonzo's Quest</div><div class="game-provider">NetEnt</div></div>
-      </div>
-      <div class="game-card">
-        <div class="game-thumb">🃏</div>
-        <div class="game-info"><div class="game-name">Blackjack Pro</div><div class="game-provider">Evolution</div></div>
-      </div>
-      <div class="game-card">
-        <div class="game-thumb"><span class="game-badge">TOP</span>📖</div>
-        <div class="game-info"><div class="game-name">Book of Dead</div><div class="game-provider">Play'n GO</div></div>
-      </div>
-      <div class="game-card">
-        <div class="game-thumb">🐟</div>
-        <div class="game-info"><div class="game-name">Big Bass Bonanza</div><div class="game-provider">Pragmatic Play</div></div>
-      </div>
-      <div class="game-card">
-        <div class="game-thumb"><span class="game-badge game-badge-gold">MEGA</span>🌟</div>
-        <div class="game-info"><div class="game-name">Mega Moolah</div><div class="game-provider">Microgaming</div></div>
-      </div>
-      <div class="game-card">
-        <div class="game-thumb">⚡</div>
-        <div class="game-info"><div class="game-name">Lightning Roulette</div><div class="game-provider">Evolution</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SPORTS SECTION -->
-<section class="section" id="sports">
-  <div class="container">
-    <div class="sec-header">
-      <div>
-        <div class="sec-label">Sports Betting</div>
-        <div class="sec-title">Bet on Your <span class="gold-text">Favourite Sports</span></div>
-        <div class="sec-desc">Competitive odds on football, tennis, basketball, and 30+ other sports. Live in-play betting with real-time markets and cash-out options.</div>
-      </div>
-      <button class="btn btn-outline">All Sports →</button>
-    </div>
-    <div class="sports-grid">
-      <div class="sport-card"><div class="sport-icon">⚽</div><div class="sport-name">Football</div><div class="sport-markets">2,400+ markets</div></div>
-      <div class="sport-card"><div class="sport-icon">🎾</div><div class="sport-name">Tennis</div><div class="sport-markets">850+ markets</div></div>
-      <div class="sport-card"><div class="sport-icon">🏀</div><div class="sport-name">Basketball</div><div class="sport-markets">620+ markets</div></div>
-      <div class="sport-card"><div class="sport-icon">🏒</div><div class="sport-name">Ice Hockey</div><div class="sport-markets">480+ markets</div></div>
-      <div class="sport-card"><div class="sport-icon">🎱</div><div class="sport-name">Snooker</div><div class="sport-markets">310+ markets</div></div>
-      <div class="sport-card"><div class="sport-icon">🏎️</div><div class="sport-name">Formula 1</div><div class="sport-markets">180+ markets</div></div>
-      <div class="sport-card"><div class="sport-icon">🥊</div><div class="sport-name">Boxing / MMA</div><div class="sport-markets">240+ markets</div></div>
-      <div class="sport-card"><div class="sport-icon">🏈</div><div class="sport-name">Am. Football</div><div class="sport-markets">540+ markets</div></div>
-    </div>
-    <div style="padding:24px 28px;background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
-      <div>
-        <div style="font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:4px">In-Play Betting — Live Odds Updated in Real Time</div>
-        <div style="font-size:.84rem;color:var(--t2)">Cash out any time. Bet builder available. Thousands of live events every day.</div>
-      </div>
-      <button class="btn btn-primary">Bet Live Now →</button>
-    </div>
-  </div>
-</section>
-
-<!-- LIVE CASINO -->
-<section class="section bg1" id="live">
-  <div class="container">
-    <div class="live-games-header">
-      <div>
-        <div class="sec-label">Live Casino</div>
-        <div class="sec-title">
-          Live Casino
-          <span class="live-badge-inline">LIVE NOW</span>
-        </div>
-        <div class="sec-desc">Real dealers, real action — powered by Evolution &amp; Pragmatic Play. Stream in HD from any device.</div>
-      </div>
-      <button class="btn btn-outline">Show All →</button>
-    </div>
-
-    <!-- Live casino screenshot -->
-    <div class="live-screenshot-wrap">
-      <img src="img-bet.webp" alt="Betsson Live Casino"
-           onerror="this.parentElement.style.display='none'"/>
-    </div>
-
-    <!-- 4 Game cards matching screenshot exactly -->
-    <div class="live-games-grid">
-      <!-- Game 1 — save as game-roleta.jpg -->
-      <div class="live-game-card">
-        <div class="live-game-thumb">
-          <img src="game-roleta.jpg" alt="Betsson Brazilian Roulette"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-          <div class="live-game-thumb-placeholder" style="display:none">🎡</div>
-          <div class="live-game-overlay">LIVE</div>
-        </div>
-        <div class="live-game-info">
-          <div class="live-game-name">Betsson Brazilian Roulette</div>
-          <div class="live-game-provider">Pragmatic Play</div>
-        </div>
-      </div>
-      <!-- Game 2 — save as game-crazy-time.jpg -->
-      <div class="live-game-card">
-        <div class="live-game-thumb">
-          <img src="game-crazy-time.jpg" alt="Crazy Time"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-          <div class="live-game-thumb-placeholder" style="display:none">🎡</div>
-          <div class="live-game-overlay">LIVE</div>
-        </div>
-        <div class="live-game-info">
-          <div class="live-game-name">Crazy Time</div>
-          <div class="live-game-provider">Evolution</div>
-        </div>
-      </div>
-      <!-- Game 3 — save as game-lightning.jpg -->
-      <div class="live-game-card">
-        <div class="live-game-thumb">
-          <img src="game-lightning.jpg" alt="Lightning Roulette"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-          <div class="live-game-thumb-placeholder" style="display:none">⚡</div>
-          <div class="live-game-overlay">LIVE</div>
-        </div>
-        <div class="live-game-info">
-          <div class="live-game-name">Lightning Roulette</div>
-          <div class="live-game-provider">Evolution</div>
-        </div>
-      </div>
-      <!-- Game 4 — save as game-mega-bola.jpg -->
-      <div class="live-game-card">
-        <div class="live-game-thumb">
-          <img src="game-mega-bola.jpg" alt="Mega Ball"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-          <div class="live-game-thumb-placeholder" style="display:none">🎰</div>
-          <div class="live-game-overlay">LIVE</div>
-        </div>
-        <div class="live-game-info">
-          <div class="live-game-name">Mega Ball</div>
-          <div class="live-game-provider">Evolution</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="live-cta-bar">
-      <div>
-        <h4>4K HD Streaming · Real Dealers · Game Shows</h4>
-        <p>100+ live tables available right now. Play from desktop, mobile, or tablet.</p>
-      </div>
-      <button class="btn btn-primary">Enter Live Casino →</button>
-    </div>
-  </div>
-</section>
-
-<!-- WHY BETSSON -->
-<section class="section">
-  <div class="container">
-    <div class="sec-label">Why Betsson</div>
-    <div class="sec-title" style="margin-bottom:36px">Built for <span class="grad-text">Serious Players</span></div>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🏛️</div>
-        <h3>Fully Licensed &amp; Regulated</h3>
-        <p>Licensed by the Malta Gaming Authority (MGA) and UK Gambling Commission. Your funds are protected by strict regulations.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">⚡</div>
-        <h3>Lightning-Fast Payouts</h3>
-        <p>Instant e-wallet withdrawals. Bank transfers within 24 hours. Your winnings delivered when you need them.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔒</div>
-        <h3>Bank-Grade Security</h3>
-        <p>256-bit SSL encryption and two-factor authentication keep your account and funds completely secure.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎮</div>
-        <h3>4,000+ Premium Games</h3>
-        <p>The largest certified game library in Europe — exclusive slots, progressive jackpots, and live dealer tables.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📱</div>
-        <h3>Award-Winning Mobile App</h3>
-        <p>Rated 4.7★ by 200,000+ players. iOS and Android. Full features, zero compromise.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">💬</div>
-        <h3>24/7 Customer Support</h3>
-        <p>Live chat, email, and phone support around the clock. Our expert team is always ready to help.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROMOTIONS -->
-<section class="section bg1" id="promotions">
-  <div class="container">
-    <div class="sec-header">
-      <div>
-        <div class="sec-label">Promotions</div>
-        <div class="sec-title">Current <span class="gold-text">Offers &amp; Bonuses</span></div>
-        <div class="sec-desc">New promotions every week. Casino bonuses, sports free bets, cashback rewards, and exclusive VIP perks.</div>
-      </div>
-      <button class="btn btn-outline">All Offers →</button>
-    </div>
-    <div class="promo-grid">
-      <div class="promo-card">
-        <div class="promo-thumb">🎁<span class="promo-type-tag">Casino</span></div>
-        <div class="promo-body">
-          <div class="promo-title">Casino Welcome Bonus</div>
-          <div class="promo-desc">100% match on your first deposit plus free spins on top-rated slots.</div>
-          <div class="promo-amount">Up to €200 + 100 Spins</div>
-        </div>
-      </div>
-      <div class="promo-card">
-        <div class="promo-thumb">⚽<span class="promo-type-tag">Sports</span></div>
-        <div class="promo-body">
-          <div class="promo-title">Sports Welcome Offer</div>
-          <div class="promo-desc">Lose your first sports bet? Get it back as a free bet, no questions asked.</div>
-          <div class="promo-amount">€25 Risk-Free Bet</div>
-        </div>
-      </div>
-      <div class="promo-card">
-        <div class="promo-thumb">🔄<span class="promo-type-tag">Weekly</span></div>
-        <div class="promo-body">
-          <div class="promo-title">Weekly Cashback</div>
-          <div class="promo-desc">10% cashback on net losses every Monday. Auto-credited, no wagering required.</div>
-          <div class="promo-amount">10% Back Every Week</div>
-        </div>
-      </div>
-    </div>
-    <div style="margin-top:16px;padding:14px 18px;background:rgba(255,184,0,.07);border:1px solid rgba(255,184,0,.2);border-radius:var(--r-md);font-size:.78rem;color:#b89020;line-height:1.6">
-      ⚠️ All promotions subject to terms and conditions. Minimum deposits, wagering requirements, and game restrictions apply. <a href="casino-bonus-explained.html" style="color:var(--gold);text-decoration:underline">Read the full bonus terms →</a>
-    </div>
-  </div>
-</section>
-
-<!-- RESPONSIBLE GAMBLING -->
-<section class="section">
-  <div class="container">
-    <div class="resp-grid">
-      <div>
-        <div class="sec-label">Responsible Gaming</div>
-        <div class="sec-title">We Play <span class="grad-text">Responsibly</span></div>
-        <p style="font-size:.88rem;color:var(--t2);line-height:1.72;margin-bottom:20px">Betsson is fully committed to safe, responsible gambling. We provide comprehensive tools that keep you in control of your gaming experience at all times.</p>
-        <div class="resp-list">
-          <div class="resp-item">Set daily, weekly, and monthly deposit limits to manage your budget.</div>
-          <div class="resp-item">Use session time reminders to track how long you've been playing.</div>
-          <div class="resp-item">Take a cooling-off break or permanently self-exclude whenever you need to.</div>
-          <div class="resp-item">Access free, confidential help at BeGambleAware.org or GamCare at any time.</div>
-          <div class="resp-item">Parental controls and age verification to prevent underage gambling.</div>
-        </div>
-        <div class="resp-highlight">
-          <strong>18+ Only.</strong> Gambling is entertainment — never gamble money you can't afford to lose. If gambling stops being fun, help is available 24/7 at <strong>BeGambleAware.org</strong>.
-        </div>
-      </div>
-      <div class="resp-card">
-        <div style="font-size:3rem;margin-bottom:18px">🛡️</div>
-        <h3 style="font-family:'Outfit',sans-serif;font-size:1.35rem;font-weight:700;margin-bottom:12px">Safe Gaming Tools</h3>
-        <p style="font-size:.84rem;color:var(--t2);line-height:1.6;margin-bottom:18px">Industry-leading responsible gaming features built directly into your account.</p>
-        <div class="resp-tools">
-          <div class="resp-tool-item">
-            <div class="resp-tool-item-icon">💳</div>
-            <div><div class="resp-tool-item-title">Deposit Limits</div><div class="resp-tool-item-sub">Daily / Weekly / Monthly</div></div>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">🎁 Get 1,000,000 free coins on sign up</span>
+          <h1>Spin, Win &amp; Have Fun with <span class="gradient-text">Friends</span></h1>
+          <p>Enjoy hundreds of free social casino games — slots, roulette, blackjack and more. No real money, no risk, just pure entertainment.</p>
+          <div class="hero-actions">
+            <a href="#play" class="btn btn-primary">Play Now – It's Free</a>
+            <a href="#games" class="btn btn-ghost">Explore Games</a>
           </div>
-          <div class="resp-tool-item">
-            <div class="resp-tool-item-icon">⏰</div>
-            <div><div class="resp-tool-item-title">Session Time Limits</div><div class="resp-tool-item-sub">Auto-logout reminders</div></div>
-          </div>
-          <div class="resp-tool-item">
-            <div class="resp-tool-item-icon">🚫</div>
-            <div><div class="resp-tool-item-title">Self-Exclusion</div><div class="resp-tool-item-sub">Temporary or permanent</div></div>
-          </div>
-          <div class="resp-tool-item">
-            <div class="resp-tool-item-icon">📊</div>
-            <div><div class="resp-tool-item-title">Activity Reports</div><div class="resp-tool-item-sub">Full gaming history</div></div>
+          <div class="hero-stats">
+            <div><strong>2M+</strong><small>Active Players</small></div>
+            <div><strong>250+</strong><small>Free Games</small></div>
+            <div><strong>4.8★</strong><small>Player Rating</small></div>
           </div>
         </div>
-        <a href="responsible-gambling.html" class="btn btn-outline" style="width:100%;margin-top:20px">Learn More →</a>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- CTA BANNER -->
-<section class="section bg1">
-  <div class="container">
-    <div class="cta-banner">
-      <h2>Ready to Start Your <span class="grad-text">Winning Journey?</span></h2>
-      <p>Join 10 million players at Europe's most trusted online casino. Claim your welcome bonus of up to €1,000 + 200 Free Spins today.</p>
-      <div class="cta-btns">
-        <button class="btn btn-primary btn-xl">🎰 Create Account &amp; Claim Bonus</button>
-        <button class="btn btn-outline btn-lg">Learn More →</button>
-      </div>
-      <div style="margin-top:20px;font-size:.73rem;color:var(--t3)">18+ | T&amp;Cs Apply | Gamble Responsibly | BeGambleAware.org | GamCare.org.uk</div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>About Us</h4>
-        <a href="about.html">About Betsson</a>
-        <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
-        <a href="disclaimer.html">Disclaimer</a>
-        <a href="legal-notice.html">Legal Notice</a>
-      </div>
-      <div class="footer-col">
-        <h4>Policies</h4>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
-        <a href="cookie-policy.html">Cookie Policy</a>
-        <a href="refund-withdrawal.html">Refund &amp; Withdrawal</a>
-      </div>
-      <div class="footer-col">
-        <h4>Gambling</h4>
-        <a href="responsible-gambling.html">Responsible Gambling</a>
-        <a href="age-restriction.html">Age Restriction</a>
-        <a href="gambling-risks.html">Gambling Risks</a>
-        <a href="warning.html">Warning</a>
-        <a href="self-exclusion.html">Self-Exclusion</a>
-      </div>
-      <div class="footer-col">
-        <h4>Support</h4>
-        <a href="contact.html">Contact Us</a>
-        <a href="casino-bonus-explained.html">Casino Bonus Explained</a>
-        <a href="how-it-works.html">How It Works</a>
-        <a href="faq.html">FAQ</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-bottom-left">
-        <img src="logo.png" alt="Betsson" style="height:28px;width:auto;background:#fff;border-radius:5px;padding:2px 8px"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-        <div class="footer-brand" style="display:none">BETSSON</div>
-        <div class="footer-copy">© 2024 Betsson Affiliates. All rights reserved.</div>
-      </div>
-      <div style="display:flex;align-items:center;gap:16px">
-        <div class="footer-socials">
-          <div class="social-icon">𝕏</div>
-          <div class="social-icon">f</div>
-          <div class="social-icon">in</div>
-          <div class="social-icon">▶</div>
+        <div class="slot">
+          <div class="slot-top">
+            <span class="slot-title">PLA49MO SLOTS</span>
+            <span class="coins">🪙 <span id="coins">10,000</span></span>
+          </div>
+          <div class="reels">
+            <div class="reel">🍒</div>
+            <div class="reel">💎</div>
+            <div class="reel">7️⃣</div>
+          </div>
+          <button class="btn btn-primary" id="spinBtn">SPIN · 500</button>
+          <div class="slot-msg" id="slotMsg">Try a free demo spin!</div>
         </div>
-        <button class="btn btn-outline" style="font-size:.8rem;padding:8px 16px">Log In</button>
-        <button class="btn btn-primary" style="font-size:.8rem;padding:8px 16px">Join Now</button>
       </div>
+    </section>
+
+    <!-- Games -->
+    <section id="games" class="section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Popular Games</h2>
+          <p>From classic slots to table favorites — there's something for every player.</p>
+        </div>
+        <div class="games-grid">
+          <div class="game-card">
+            <div class="game-thumb t1">🎰</div>
+            <div class="game-info"><h3>Mega Slots</h3><p>150+ themed slot machines</p></div>
+          </div>
+          <div class="game-card">
+            <div class="game-thumb t2">🃏</div>
+            <div class="game-info"><h3>Blackjack</h3><p>Beat the dealer to 21</p></div>
+          </div>
+          <div class="game-card">
+            <div class="game-thumb t3">🎡</div>
+            <div class="game-info"><h3>Roulette</h3><p>Classic wheel action</p></div>
+          </div>
+          <div class="game-card">
+            <div class="game-thumb t4">♠️</div>
+            <div class="game-info"><h3>Poker</h3><p>Play hold'em with friends</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+      <div class="container">
+        <div class="section-head">
+          <h2>Why Players Love Us</h2>
+          <p>A casino-style experience built purely for fun and community.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon">🎁</div>
+            <h3>Daily Free Coins</h3>
+            <p>Log in every day to collect bonus coins, spins and surprise rewards.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">👥</div>
+            <h3>Play with Friends</h3>
+            <p>Invite friends, send gifts and compete on weekly leaderboards.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">📱</div>
+            <h3>Play Anywhere</h3>
+            <p>Seamless on mobile, tablet and desktop — your progress syncs everywhere.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🏆</div>
+            <h3>Tournaments</h3>
+            <p>Join free tournaments and climb the ranks to earn exclusive badges.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🛡️</div>
+            <h3>Safe &amp; Secure</h3>
+            <p>No real-money gambling. Your data is protected and private.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">✨</div>
+            <h3>New Games Weekly</h3>
+            <p>Fresh slots and challenges added every week to keep things exciting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Start Playing in 3 Steps</h2>
+          <p>It takes less than a minute to join the fun.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Sign Up Free</h3>
+            <p>Create your account with email or a social login.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Claim Your Coins</h3>
+            <p>Get 1,000,000 welcome coins instantly — no deposit needed.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Play &amp; Enjoy</h3>
+            <p>Pick a game, spin the reels and climb the leaderboard.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="play">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Ready to Hit the Jackpot?</h2>
+          <p>Join millions of players and grab your free welcome bonus today.</p>
+          <a href="#" class="btn btn-primary">Claim 1M Free Coins</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <a href="#" class="logo"><div class="logo-icon">🎰</div>pla<span>49</span>mo</a>
+        <ul class="footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Responsible Play</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <p class="disclaimer">
+        <span class="age">18+</span>
+        pla49mo is a social casino intended for an adult audience for amusement purposes only. It does not offer real-money gambling or an opportunity to win real money or prizes. Practice or success at social casino gaming does not imply future success at real-money gambling.
+        <br />© <span id="year"></span> pla49mo. All rights reserved.
+      </p>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<div class="gamble-bar">
-  18+ | Gamble Responsibly | This website is an independent affiliate and does not provide gambling services. | <strong style="color:var(--t2)">BeGambleAware.org</strong> | GamCare.org.uk | © 2024 Betsson Affiliates
-</div>
+  <script>
+    // Mobile menu
+    const toggle = document.getElementById("menuToggle");
+    const links = document.getElementById("navLinks");
+    toggle.addEventListener("click", () => {
+      const open = links.classList.toggle("open");
+      toggle.textContent = open ? "✕" : "☰";
+    });
+    links.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+      links.classList.remove("open");
+      toggle.textContent = "☰";
+    }));
 
-<script>
-var hamburger = document.getElementById('hamburger');
-var mobileMenu = document.getElementById('mobileMenu');
-hamburger.addEventListener('click', function(){
-  mobileMenu.classList.toggle('open');
-});
-document.querySelectorAll('.mobile-link').forEach(function(l){
-  l.addEventListener('click', function(){ mobileMenu.classList.remove('open'); });
-});
-document.querySelectorAll('button').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    window.open('https://www.betsson.com/', '_blank');
-  });
-});
-</script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Demo slot machine
+    const symbols = ["🍒", "💎", "7️⃣", "🍋", "⭐", "🔔"];
+    const reels = document.querySelectorAll(".reel");
+    const spinBtn = document.getElementById("spinBtn");
+    const msg = document.getElementById("slotMsg");
+    const coinsEl = document.getElementById("coins");
+    let coins = 10000;
+    const bet = 500;
+
+    spinBtn.addEventListener("click", () => {
+      if (coins < bet) { coins = 10000; msg.textContent = "Out of coins – here's a free refill! 🎁"; }
+      coins -= bet;
+      coinsEl.textContent = coins.toLocaleString();
+      spinBtn.disabled = true;
+      msg.textContent = "Spinning...";
+
+      const results = [];
+      reels.forEach((reel, i) => {
+        reel.classList.add("spinning");
+        const timer = setInterval(() => {
+          reel.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        }, 80);
+        setTimeout(() => {
+          clearInterval(timer);
+          reel.classList.remove("spinning");
+          results[i] = symbols[Math.floor(Math.random() * symbols.length)];
+          reel.textContent = results[i];
+
+          if (i === reels.length - 1) {
+            let win = 0;
+            if (results[0] === results[1] && results[1] === results[2]) win = bet * 10;
+            else if (results[0] === results[1] || results[1] === results[2] || results[0] === results[2]) win = bet * 2;
+            coins += win;
+            coinsEl.textContent = coins.toLocaleString();
+            msg.textContent = win ? `🎉 You won ${win.toLocaleString()} coins!` : "No luck — spin again!";
+            spinBtn.disabled = false;
+          }
+        }, 700 + i * 350);
+      });
+    });
+  </script>
 </body>
 </html>

